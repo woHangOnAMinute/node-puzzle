@@ -11,6 +11,8 @@ describe 'packer', ->
     packer.pack data, (err, buffer) ->
       if err then return done err
       res = buffer
+      console.log 'buffer.length'
+      console.log buffer.length
       assert buffer.length <= 128
       done()
 
